@@ -1,4 +1,4 @@
-import {useState} from "react";
+import {useEffect, useState} from "react";
 
 import {Header} from "../../components/Header";
 import {CreateTask} from "../../components/CreateTask";
@@ -13,14 +13,31 @@ interface Task {
 }
 
 export function Home() {
+
+    function memorizeTasks(memotasks:Task[]){
+        window.localStorage.setItem('tasks', JSON.stringify(memotasks))
+    }
+
+
     const [tasks, setTasks] = useState<Task[]>([])
+
+    useEffect(()=>{
+        if(window.localStorage.getItem('tasks')) {
+            const loadedTasks = JSON.parse(window.localStorage.getItem('tasks')!)
+            setTasks(loadedTasks)
+        }
+    },[])
 
     function handleCreateTask(description: string) {
         event!.preventDefault()
         if (description.length>0){
             const id = (new Date()).getTime() // unique identifier
             const completed = false // initial completed state
-            setTasks(prevState => [...prevState, {id, description, completed}])
+            setTasks(prevState => {
+                const newState = [...prevState, {id, description, completed}]
+                memorizeTasks(newState)
+                return newState
+            })
         }else{
             alert("Você deve dar um nome ou descrição à tarefa")
         }
@@ -28,6 +45,7 @@ export function Home() {
 
     function handleDeleteTask(id: number) {
         const newTaskList = tasks.filter(task => task.id !== id)
+        memorizeTasks(newTaskList)
         setTasks(newTaskList)
     }
 
@@ -43,6 +61,7 @@ export function Home() {
             } else {
                 newTaskList.push(task)
             }
+            memorizeTasks(newTaskList)
             setTasks(newTaskList)
         })
     }
