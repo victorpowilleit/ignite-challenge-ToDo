@@ -1,0 +1,40 @@
+form{
+  width: 100%;
+  display: flex;
+  max-width: 736px;
+  gap: 8px;
+  transform: translateY(-50%);
+  margin-bottom: 3rem;
+}
+form input{
+  flex: 1;
+  padding: 1rem;
+  font-size: 1rem;
+  background-color: var(--gray-500);
+  color: var(--gray-300);
+  border-radius: 8px;
+}
+
+form button{
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  font-size: .875rem;
+  padding: 16px;
+  gap: 8px;
+  background-color: var(--blue-dark);
+  color: var(--gray-100);
+  transition: background-color .1s;
+}
+form button:hover{
+  background-color: var(--blue);
+}
+
+@media (max-width:536px){
+  form{
+    flex-direction: column;
+  }
+  button{
+    justify-content: center;
+  }
+}

@@ -1,0 +1,17 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--gray-700);
+  height: 200px;
+}
+
+.header .logo {
+  height: 48px;
+}
+
+@media (max-width:536px){
+  .header .logo{
+    transform: translateY(-50%);
+  }
+}

@@ -1,0 +1,29 @@
+.info{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.info .allTasks, .info .completedTasks{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: .875rem;
+  font-weight: bold;
+}
+
+.info .allTasks{
+  color: var(--blue);
+}
+
+.info .completedTasks{
+  color: var(--purple);
+}
+
+.info .allTasks div, .info .completedTasks div{
+  background-color: var(--gray-400);
+  border-radius: 100px;
+  padding: 2px 8px;
+  color: var(--gray-200);
+  font-size: .75rem;
+}

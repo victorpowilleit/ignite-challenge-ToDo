@@ -1,0 +1,44 @@
+.task{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+  width: 100%;
+  gap: 12px;
+  padding: 16px;
+  border-radius: 8px;
+  background-color: var(--gray-500);
+  color: var(--gray-100);
+  font-size: .875rem;
+  line-height: .875rem
+}
+.task span{
+  flex: 1;
+  font-size: .875rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.task .checkbox_false, .task .checkbox_true{
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.task .checkbox_true{
+  color: var(--purple);
+  background-color: var(--gray-100);
+  border-radius: 100px;
+}
+
+.text_checked_true{
+  color: var(--gray-300);
+  text-decoration: line-through;
+}
+
+.task .checkbox_false{
+  color: var(--blue);
+}
+
+.task .delete{
+  color: var(--gray-300);
+  cursor: pointer;
+}
