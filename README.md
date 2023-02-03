@@ -18,14 +18,15 @@
 </a>
 <br/>
 <br/>
-<a href="https://ignite-react-todo-list.web.app">
-Online Demonstration Link
-</a>
- - 
-<a href="https://expo.dev/accounts/victor.powilleit/projects/ignite-react-todo-list/builds/49e64819-789e-41e8-b924-7c5263287b79">
-Android App Link
-</a>
 </p>
+<a href="#About">
+ABOUT
+</a>
+ • 
+<a href="#Log">
+LOG
+</a>
+<br/><br/>
 <img width="100%" alt="Captura de Tela 2023-01-30 às 23 03 31" src="https://user-images.githubusercontent.com/40838411/215649929-968081eb-bd04-444e-8667-1ec3ad20e54f.png" style="max-width: 100%;">
 
 <p align="center">
@@ -39,9 +40,9 @@ Android App Link
 <br/>
 </p>
 
-<br/><h1 align="center">⇓</h1>
+<br/><h1 id="About" align="center">⇓</h1>
 
-<h1 align="center"><a href="./">ToDo App</a></h1>
+<h1 align="center"><a href="#About">ToDo App</a></h1>
 
 ### Simple task list app, wich help tracks the tasks planned for the day.
 
@@ -55,9 +56,9 @@ Android App Link
 
 ```Mobile App helds an extra function to remove all completed tasks at once```
 
-<br/><h1 align="center">⇓</h1>
+<br/><h1 id="Log" align="center">⇓</h1>
 
-<h1 align="center"><a href="./">Project LOG</a></h1>
+<h1 align="center"><a href="#Log">Project LOG</a></h1>
 
 ### 02/02/2023 - Mobile App added to repo <a href="https://github.com/victorpowilleit/ReactNative-ToDo" target="BLANK">ReactNative-ToDo</a>
 Link to android application available at expo page: <a href="https://expo.dev/accounts/victor.powilleit/projects/ignite-react-todo-list/builds/49e64819-789e-41e8-b924-7c5263287b79">Android App</a>
